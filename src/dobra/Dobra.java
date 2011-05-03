@@ -58,6 +58,19 @@ public class Dobra {
             return faz_dobra(soma);
         }
 
+        else if(numero.size() == 6){
+
+            ArrayList<Integer> soma = new ArrayList<Integer>();
+
+            soma.add(soma(numero.get(0), numero.get(5)));
+            soma.add(soma(numero.get(1), numero.get(4)));
+            soma.add(soma(numero.get(2), numero.get(3)));
+
+            soma.add(0);
+
+            return faz_dobra(soma);
+        }
+
   /*      else if( ( numero.size() % 2 ) == 0){
 
         }*/

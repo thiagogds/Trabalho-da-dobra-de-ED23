@@ -86,4 +86,16 @@ public class TestDobra extends Assert {
         assertEquals(36, Dobra.faz_dobra(lista));
     }
 
+    @Test
+    public void seisSlotRetornaASoma() {
+        lista.add(3);
+        lista.add(7);
+        lista.add(9);
+        lista.add(4);
+        lista.add(6);
+        lista.add(8);
+
+        assertEquals(16, Dobra.faz_dobra(lista));
+    }
+
 }
