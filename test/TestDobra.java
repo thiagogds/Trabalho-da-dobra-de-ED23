@@ -1,39 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
 import org.junit.Assert;
 import org.junit.Test;
 import dobra.Dobra;
 
 /**
  *
- * @author thiago
+ * @author Grupo 1
  */
-//@RunWith(Suite.class)
-//@Suite.SuiteClasses({})
+
 public class TestDobra extends Assert {
-    /*
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-     */
+    
     ArrayList<Integer> lista;
 
     @Before
@@ -45,7 +22,7 @@ public class TestDobra extends Assert {
     public void umSlotRetornaEleMesmo() {
         lista.add(3);
 
-        assertEquals(3, Dobra.faz_dobra(lista));
+        assertEquals(3, Dobra.fazDobra(lista));
     }
 
     @Test
@@ -53,7 +30,7 @@ public class TestDobra extends Assert {
         lista.add(3);
         lista.add(7);
 
-        assertEquals(37, Dobra.faz_dobra(lista));
+        assertEquals(37, Dobra.fazDobra(lista));
     }
 
     @Test
@@ -62,7 +39,7 @@ public class TestDobra extends Assert {
         lista.add(7);
         lista.add(9);
 
-        assertEquals(36, Dobra.faz_dobra(lista));
+        assertEquals(36, Dobra.fazDobra(lista));
     }
 
     @Test
@@ -72,7 +49,7 @@ public class TestDobra extends Assert {
         lista.add(9);
         lista.add(4);
 
-        assertEquals(76, Dobra.faz_dobra(lista));
+        assertEquals(76, Dobra.fazDobra(lista));
     }
 
     @Test
@@ -83,7 +60,7 @@ public class TestDobra extends Assert {
         lista.add(4);
         lista.add(6);
 
-        assertEquals(36, Dobra.faz_dobra(lista));
+        assertEquals(36, Dobra.fazDobra(lista));
     }
 
     @Test
@@ -95,7 +72,7 @@ public class TestDobra extends Assert {
         lista.add(6);
         lista.add(8);
 
-        assertEquals(16, Dobra.faz_dobra(lista));
+        assertEquals(16, Dobra.fazDobra(lista));
     }
 
 }
