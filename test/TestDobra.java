@@ -30,36 +30,60 @@ public class TestDobra extends Assert {
     public static void tearDownClass() throws Exception {
     }
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @After
     public void tearDown() throws Exception {
     }
      */
+    ArrayList<Integer> lista;
+
+    @Before
+    public void setUp() throws Exception {
+        lista = new ArrayList<Integer>();
+    }
 
     @Test
     public void umSlotRetornaEleMesmo() {
-        ArrayList<Integer> lista = new ArrayList<Integer>();
         lista.add(3);
+
         assertEquals(3, Dobra.faz_dobra(lista));
     }
 
     @Test
     public void doisSlotRetornaAUniaoDeles() {
-        ArrayList<Integer> lista = new ArrayList<Integer>();
         lista.add(3);
         lista.add(7);
+
         assertEquals(37, Dobra.faz_dobra(lista));
     }
 
     @Test
-        public void tresSlotRetornaASoma() {
-        ArrayList<Integer> lista = new ArrayList<Integer>();
+    public void tresSlotRetornaASoma() {
         lista.add(3);
         lista.add(7);
         lista.add(9);
-        assertEquals(9, Dobra.faz_dobra(lista));
+
+        assertEquals(36, Dobra.faz_dobra(lista));
     }
+
+    @Test
+    public void quatroSlotRetornaASoma() {
+        lista.add(3);
+        lista.add(7);
+        lista.add(9);
+        lista.add(4);
+
+        assertEquals(76, Dobra.faz_dobra(lista));
+    }
+
+    @Test
+    public void cincoSlotRetornaASoma() {
+        lista.add(3);
+        lista.add(7);
+        lista.add(9);
+        lista.add(4);
+        lista.add(6);
+
+        assertEquals(36, Dobra.faz_dobra(lista));
+    }
+
 }
