@@ -19,10 +19,16 @@ public class TestDobra extends Assert {
     }
 
     @Test
+    public void zeroSlotRetornaEleMesmo() {
+
+        assertEquals(0, Dobra.metodoDobra(lista));
+    }
+
+    @Test
     public void umSlotRetornaEleMesmo() {
         lista.add(3);
 
-        assertEquals(3, Dobra.fazDobra(lista));
+        assertEquals(3, Dobra.metodoDobra(lista));
     }
 
     @Test
@@ -30,7 +36,7 @@ public class TestDobra extends Assert {
         lista.add(3);
         lista.add(7);
 
-        assertEquals(37, Dobra.fazDobra(lista));
+        assertEquals(37, Dobra.metodoDobra(lista));
     }
 
     @Test
@@ -39,7 +45,7 @@ public class TestDobra extends Assert {
         lista.add(7);
         lista.add(9);
 
-        assertEquals(36, Dobra.fazDobra(lista));
+        assertEquals(63, Dobra.metodoDobra(lista));
     }
 
     @Test
@@ -49,7 +55,7 @@ public class TestDobra extends Assert {
         lista.add(9);
         lista.add(4);
 
-        assertEquals(76, Dobra.fazDobra(lista));
+        assertEquals(67, Dobra.metodoDobra(lista));
     }
 
     @Test
@@ -60,7 +66,7 @@ public class TestDobra extends Assert {
         lista.add(4);
         lista.add(6);
 
-        assertEquals(36, Dobra.fazDobra(lista));
+        assertEquals(36, Dobra.metodoDobra(lista));
     }
 
     @Test
@@ -72,7 +78,7 @@ public class TestDobra extends Assert {
         lista.add(6);
         lista.add(8);
 
-        assertEquals(16, Dobra.fazDobra(lista));
+        assertEquals(34, Dobra.metodoDobra(lista));
     }
 
 }
