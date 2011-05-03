@@ -25,21 +25,24 @@ public class Dobra {
 
         return (numero1 + numero2) % 10;
     }
-    /*
-    public static int fazDobra(ArrayList<Integer> numero){
 
-    int aux1 = 0;
-    int aux2 = numero.size() - 1;
+    public static ArrayList<Integer> dobra(ArrayList<Integer> dobra) {
+        ArrayList<Integer> listaSoma = new ArrayList<Integer>();
 
-    return fazDobra(numero, aux1, aux2);
+        int inicio = 0;
+        int fim = dobra.size() - 1;
 
+        while (listaSoma.size() < dobra.size() / 2) {
+            listaSoma.add(soma(dobra.get(inicio), dobra.get(fim)));
+            inicio += 1;
+            fim -= 1;
+        }
+
+        return listaSoma;
     }
-     *
-     */
 
     public static int fazDobra(ArrayList<Integer> numero) {
 
-        ArrayList<Integer> soma = new ArrayList<Integer>();
 
         if (numero.size() == 1) {
 
@@ -49,22 +52,10 @@ public class Dobra {
             return concatenaNumeros(numero.get(0), numero.get(1));
         } else if (numero.size() % 2 == 0) {
 
-            int inicio = 0;
-            int fim = numero.size() - 1;
-
-            while (soma.size() < numero.size() / 2) {
-                soma.add(soma(numero.get(inicio), numero.get(fim)));
-                inicio += 1;
-                fim -= 1;
-            }
+            ArrayList<Integer> soma = new ArrayList<Integer>();
+            soma = dobra(numero);
 
             return fazDobra(soma);
-
-
-
-            //soma.add(soma(numero.get(0), numero.get(3)));
-
-            //fazDobra(soma, aux1++, aux2--);
         } else {
             numero.add(0);
 
